@@ -21,20 +21,3 @@ A - 1. If the input is an empty string, return None
     5. Return True
 '''
 
-def unique_chars(letters):
-  if letters == '':
-    return None
-  else:
-    chars = {}
-
-    for char in letters:
-      if char in chars:
-        char += 1
-      else:
-        char = 1
-
-
-print(unique_chars('aabc'))
-print(unique_chars('acd'))
-print(unique_chars('Aa'))
-print(unique_chars(''))
