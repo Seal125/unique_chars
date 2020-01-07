@@ -22,17 +22,18 @@ A - 1. If the input is an empty string, return None
 '''
 
 def unique_chars(letters):
-  if letters == '':
-    return None
-  else:
+    if len(letters) == 0:
+        return None
+
     chars = {}
 
     for char in letters:
       if char in chars:
-        char += 1
+        return False
       else:
-        char = 1
+        chars[char] = 1
 
+    return True
 
 print(unique_chars('aabc'))
 print(unique_chars('acd'))
